@@ -18,8 +18,6 @@ public class DbConnection
    public IMongoCollection<UserModel> UserCollection { get; private set; }
    public IMongoCollection<SuggestionModel> SuggestionCollection { get; private set; }
 
-
-
    public DbConnection(IConfiguration config)
    {
       _config = config;
@@ -32,22 +30,5 @@ public class DbConnection
       UserCollection = _db.GetCollection<UserModel>(UserCollectionName);
       SuggestionCollection = _db.GetCollection<SuggestionModel>(SuggestionCollectionName);
 
-
-
-
-
    }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
